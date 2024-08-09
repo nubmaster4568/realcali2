@@ -1,23 +1,4 @@
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
@@ -1397,10 +1378,10 @@ body {
 /* Animation keyframes */
 @keyframes slideUp {
     from {
-        transform: translate(-50%, 100%); /* Start from the bottom */
+        opacity: 0; /* Start from the bottom */
     }
     to {
-        transform: translate(-50%, -50%); /* End at center */
+        opacity: 1; /* End at center */
     }
 }
 
@@ -1418,7 +1399,9 @@ body {
     opacity: 0.3;
     pointer-events: none; /* Prevent interactions with background elements */
 }
-
+.slick-prev:before, .slick-next:before{
+    color: black !important;
+}
 /* Slick slider navigation */
 .slick-prev, .slick-next {
     font-size: 0 !important;
@@ -1431,7 +1414,7 @@ body {
     padding: 0 !important;
     transform: translate(0, -50%) !important;
     cursor: pointer !important;
-    color: transparent !important;
+    color: black !important;
     border: none !important;
     outline: none !important;
     background: transparent !important;

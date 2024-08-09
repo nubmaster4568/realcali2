@@ -182,15 +182,21 @@ $(document).on('click', '.product-item', function() {
 
     // Show the modal
     $('#product-modal').show();
+    $('body').css('overflow-y', 'hidden');
+
 });
 // Close modal functionality
             $(document).on('click', '.close-modal', function() {
                 $('#product-modal').hide();
+                $('body').css('overflow-y', 'scroll'); // or 'scroll'
+
             });
 
             $(window).on('click', function(event) {
                 if ($(event.target).is('#product-modal')) {
                     $('#product-modal').hide();
+                    $('body').css('overflow-y', 'scroll'); // or 'scroll'
+
                 }
             });
         
